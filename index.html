@@ -7,6 +7,25 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 </script>
+  <!-- Event snippet for คลิกเพื่อโทร conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17495681811/hYW_CMnWqrYdEJPWy5ZB',
+      'value': 1.0,
+      'currency': 'THB',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#047857">
