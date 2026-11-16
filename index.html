@@ -25,6 +25,18 @@ function gtag_report_conversion(url) {
   return false;
 }
 </script>
+  <script>
+document.addEventListener('click', function(e) {
+  var a = e.target.closest('a');
+  if (a && a.href && a.href.indexOf('lin.ee') > -1) {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17495681811/E6aRCMmWorkdEJPWy5ZB',
+      'value': 50.0,
+      'currency': 'THB'
+    });
+  }
+});
+</script>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
